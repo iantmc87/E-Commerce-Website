@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./parts/head.ejs %>
+</head>
+<body>
+  <% include ./parts/header.ejs %>
+
+  <main>
+    <div class="login-box">
+      <br>
+         <p><b>Create a Ticket Shop account</b></p>
+         <br>
+          <form class="signup-form" action="/user/api/v1/newuser/create" method="post">
+        <div class="input-block">
+          <p>First Name:</p>
+          <input class="input-box" type="text" name="firstName" placeholder="enter first name" autofocus required/>
+        </div>
+        <div class="input-block">
+          <p>Surname:</p>
+          <input class="input-box" type="text" name="surname" placeholder="enter surname" required/>
+        </div>
+        <div class="input-block">
+          <p>Email:</p>
+          <input class="input-box" type="email" name="email" placeholder="enter email" required/>
+        </div>
+        <div class="input-block">
+          <p>Password:</p>
+          <input class="input-box" type="password" name="password" placeholder="enter password" required/>
+        </div>
+        <div class="input-block">
+          <p>Security Question:</p>
+          <select class="input-box" name="secureQuestion">
+            <option value="Which is your favourite place?">What was your first car?</option>
+            <option value="What is your nick name?">What was your childhood nickname?</option>
+            <option value="What is your best friend name?">Where was your first job?</option>
+            <option value="Which is your favourite color?">Which is your favourite colour?</option>
+            <option value="Which is your favourite food?">What is your favourite food?</option>
+          </select>
+        </div>
+        <div class="input-block">
+          <p>Security Answer:</p>
+          <input class="input-box" type="text" name="secureAnswer" placeholder="enter security answer" required/>
+        </div>
+        <div class="input-block">
+          <p>Telephone:</p>
+          <input class="input-box" type="number" name="telephone" placeholder="enter telephone number" required/>
+        </div>
+        <div class="input-block">
+          <p>First Line of Address:</p>
+          <input class="input-box" type="text" name="firstLineAddress" placeholder="enter first line of address" required/>
+        </div>
+        <div class="input-block">
+          <p>Town:</p>
+          <input class="input-box" type="text" name="town" placeholder="enter town" required/>
+        </div>
+        <div class="input-block">
+          <p>County:</p>
+          <input class="input-box" type="text" name="county" placeholder="enter county" required/>
+        </div>
+        <div class="input-block">
+          <p>Postcode:</p>
+          <input class="input-box" type="text" name="postCode" placeholder="enter postcode" required/>
+        </div><br>
+        <button class="btn btn-primary btn-block" type="submit" name="submit">Signup</button><br>
+        <p><b>Already have an account?</b> </p>
+        <a href="/user/login"  class="btn btn-danger btn-md btn-block"><b>Log In Here</b></a><br>
+      </form>
+    </div>
+  </main>
+
+  <% include ./parts/footer.ejs %>
+</body>
+</html>
