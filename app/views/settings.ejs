@@ -18,7 +18,7 @@
           <form class="details-form" action="/user/account/modify/<%= user.userId %>" method="post">
             <input type="hidden" name="_method" value="put">
             <div class="input-block">
-              <p>Email:</p>
+              <p>Email</p>
               <input class="input-box" type="email" name="email" value="<%= user.email %>" required>
             </div>
             <button class="btn btn-danger btn-block" type="submit" name="submit">Update</button>
@@ -36,15 +36,15 @@
         </div><br>
         <div class="line"></div><br>
         <div class="change-password">
-          <h4>Change Password:</h4>
+          <h4>Change Password</h4>
           <form class="details-form" action="/user/change/password/<%= user.userId %>" method="post">
             <input type="hidden" name="_method" value="put">
             <div class="input-block">
-              <p>Old Password:</p>
+              <p>Old Password</p>
               <input class="input-box" type="password" name="oldPassword" placeholder="Old Password" required>
             </div>
             <div class="input-block">
-              <p>New Password:</p>
+              <p>New Password</p>
               <input class="input-box" type="password" name="password" placeholder="New Password" required>
             </div>
             <button class="btn btn-danger btn-block" type="submit" name="submit">Update</button>
@@ -52,7 +52,7 @@
         </div><br>
         <div class="line"></div><br>
         <div class="delete-account">
-          <h4>Delete Account:</h4><br>
+          <h4>Delete Account</h4><br>
           <form class="details-form" action="/user/account/delete/<%= user.userId %>" method="post">
             <button class="btn btn-danger btn-block" type="submit" name="submit">Delete</button>
           </form><br>

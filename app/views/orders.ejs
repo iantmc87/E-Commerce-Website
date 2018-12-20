@@ -24,7 +24,7 @@
         <% for(i=0; i<length; i++){ %>
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3>Order : <%= (i+1) %></h3>
+              <h3>Order: <%= (i+1) %></h3>
             </div>
             <div class="panel-body">
               <h4 class="tProd">Product Details</h4><br><hr>
@@ -49,13 +49,13 @@
             </div>
             <div class="panel-body" >
               <p class="tProd"><span class="tProd">Order Date : <%= orders[i].orderDate %></span></br>
-            <span class="tProd">  Total Items : <%= orders[i].quantity %></span></br>
-              <span class="tProd">Total Price : £<%= orders[i].price %></span></p>
+            <span class="tProd">  Total Items: <%= orders[i].quantity %></span></br>
+              <span class="tProd">Total Price: £<%= orders[i].price %></span></p>
               <% if(orders[i].deliveryStatus == 1){ %>
                 <br>
-                <p class="tProd">Delivery Status : <b>Pending</b></p>
+                <p class="tProd">Delivery Status: <b>Pending</b></p>
               <% }else{ %>
-                <p class="tProd">Delivery Status : <b>delivered</b></p>
+                <p class="tProd">Delivery Status: <b>delivered</b></p>
               <% } %>
             </div>
             <hr>

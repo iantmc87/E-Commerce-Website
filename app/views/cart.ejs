@@ -15,7 +15,7 @@
         </div>
         <% if(!cart || cart.empty){ %>
           <div class="panel-body">
-            <p>Your Cart Is Empty.</p>
+            <p>Your Cart Is Empty!</p>
           </div>
         <% } else{%>
           <div class="panel-body">
@@ -49,8 +49,8 @@
             </div>
             <div class="line"></div>
             <div style="text-align:right;">
-              <p class="tProd">Total Products : <b><%= cart.totalQuantity %></b></br>
-              Total Price : <b>£<%= cart.totalPrice %></b></p>
+              <p class="tProd">Total Products: <b><%= cart.totalQuantity %></b></br>
+              Total Price: <b>£<%= cart.totalPrice %></b></p>
             </div>
           </div>
           <div class="panel-footer">
