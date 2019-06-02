@@ -26,5 +26,5 @@ A linux server with the following installed:
 <li>Create directory and copy files into it</li>
 <li>Run npm install inside directory to install node modules</li>
 <li>Run nodemon app.js</li>
-<li>View website at {IP ADDRESS}:5000</li></ul>
+<li>Open an internet browser and view website at {IP ADDRESS}:5000</li></ul>
 
