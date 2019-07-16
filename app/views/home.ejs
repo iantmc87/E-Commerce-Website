@@ -13,9 +13,9 @@
 <hr><br>
 
     <div class="container-fluid">
-      <% if(count){ %>
+      <% if(product.length){ %>
         <div class="row">
-          <% for(i=0;i<count;i++){ %>
+          <% for(i=0;i < product.length;i++){ %>
             <div class="col-sm-4">
               <div class="panel panel-primary" style="opacity: 0.9;">
                 <div class="panel-heading"><h3>Product Name: <%= product[i].productName %></h3></div>
@@ -46,6 +46,34 @@
             </div>
           <% } %>
         </div>
+          <% if (pages > 0) { %>
+          <ul class="pagination text-center">
+            <% if (current == 1) { %>
+              <li class="disabled"><a>First</a></li>
+            <% } else { %>
+              <li><a href="/1">First</a></li>
+            <% } %>
+            <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+            <% if (i !== 1) { %>
+              <li class="disabled"><a>...</a></li>
+            <% } %>
+            <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+              <% if (i == current) { %>
+                <li class="active"><a><%= i %></a></li>
+              <% } else { %>
+                <li><a href="/<%= i %>"><%= i %></a></li>
+              <% } %>
+              <% if ( i == Number(current) + 4 && i < pages) { %>
+                <li class="disabled"><a>...</a></li>
+              <% } %>
+            <% } %>
+            <% if (current == pages) { %>
+              <li class="disabled"><a>Last</a></li>
+            <% } else { %>
+              <li><a href="/<%= pages %>">Last</a></li>
+            <% } %>
+          </ul>
+          <% } %>
       <% } else{ %>
         <p>No products available or added yet.</p>
       <% } %>

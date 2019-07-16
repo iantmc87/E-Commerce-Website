@@ -7,8 +7,11 @@ var productModel = mongoose.model('product');
 
 module.exports.controller = function(app){
 
-  router.get("/",function(req,res){
-    productModel.find({},function(err,result){
+  router.get("/:page",function(req,res, next){
+    var perPage = 9
+    var page = req.params.page || 1
+
+    productModel.find({}).limit(perPage).skip((perPage * page) - perPage).exec(function(err,result){
       if(err){
         console.log(err);
         res.render('message',
@@ -22,7 +25,7 @@ module.exports.controller = function(app){
                     });
       }
       else{
-        productModel.count({},function(err,count){
+        productModel.count().exec(function(err,count){
           if(err){
             console.log(err);
             res.render('message',
@@ -42,7 +45,8 @@ module.exports.controller = function(app){
                           user:req.session.user,
                           cart:req.session.cart,
                           product:result,
-                          count:count
+                          current:page,
+                          pages:Math.ceil(count / perPage)
                         });
           }
         });
