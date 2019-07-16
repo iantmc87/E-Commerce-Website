@@ -1,6 +1,6 @@
 # E-Commerce-Website
 
-Ticket selling website using NodeJS, ExpressJS, MongoDB, HTML and CSS
+Ticket selling website using NodeJS, ExpressJS, MongoDB, HTML, CSS and Bootstrap
 
 <ul><li>View tickets for sale</li>
 <li>Add and remove tickets from cart</li>
